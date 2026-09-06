@@ -23,6 +23,7 @@
 	v1.1  - Added ADS1115 support - W. Earl
 	v2.0  - Added TLA2024 support - Sanju Lokuhitige
 	v2.1  - Ported to Linux - Sanju Lokuhitige
+	v2.2  - Fix compiler warnings - VE7FET
 
 	@section license License
 
@@ -124,7 +125,7 @@ static void writeRegister(const char* i2cDeviceName, uint8_t i2cAddress, uint8_t
 /**************************************************************************/
 static uint16_t readRegister(const char* i2cDeviceName, uint8_t i2cAddress, uint8_t reg) {
 	if (beginTransmission(i2cDeviceName, i2cAddress) < 0)
-		return NULL;
+		return 0;
 
 	int rc;
 	unsigned char buf[1] = { reg };
