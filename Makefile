@@ -18,24 +18,15 @@ $(OUT): $(OBJ)
 	$(AR) rcs $(OUT) $(OBJ)
 
 examples: $(OUT)
-	@(cd examples/multiDeviceOnSameBus && $(MAKE))
-	@(cd examples/singleEnded && $(MAKE))
-	@(cd examples/differential && $(MAKE))
-	@(cd examples/comparator && $(MAKE))
+	@(cd wolfpi && $(MAKE))
 
 help:
-	@echo "Usage: all, examples, lib, clean, mrproper"
+	@echo "Usage: all, wolfpi, lib, clean, mrproper"
 
 clean:
 	rm -f $(OBJ)
-	@(cd examples/multiDeviceOnSameBus && $(MAKE) $@)
-	@(cd examples/singleEnded && $(MAKE) $@)
-	@(cd examples/differential && $(MAKE) $@)
-	@(cd examples/comparator && $(MAKE) $@)
+	@(cd wolfpi && $(MAKE) $@)
 
 mrproper: clean
 	rm -f $(OUT)
-	@(cd examples/multiDeviceOnSameBus && $(MAKE) $@)
-	@(cd examples/singleEnded && $(MAKE) $@)
-	@(cd examples/differential && $(MAKE) $@)
-	@(cd examples/comparator && $(MAKE) $@)
+	@(cd wolfpi && $(MAKE) $@)

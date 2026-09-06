@@ -1,8 +1,8 @@
 CXX=g++
-CXXFLAGS=-I../../ -W -Wall
-LDFLAGS=-lads1x15_tla2024 -L../../
-EXEC=MultiDevice
-SRC=multiDevice.cpp
+CXXFLAGS=-I../ -W -Wall
+LDFLAGS=-lads1x15_tla2024 -L../
+EXEC=wolfpiadc
+SRC=wolfpiadc.cpp
 OBJ=$(SRC:.cpp=.o)
 
 all: $(EXEC)
