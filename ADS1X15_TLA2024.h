@@ -23,6 +23,7 @@
     v1.1  - Added ADS1115 support - W. Earl
     v2.0  - Added TLA2024 support - Sanju Lokuhitige
     v2.1  - Ported to Linux - Sanju Lokuhitige
+    v2.2  - Fix compiler warnings - VE7FET
 
     @section license License
 
@@ -195,7 +196,7 @@ protected:
     // Instance-specific properties
     const char* m_i2cDeviceName;
     uint8_t m_i2cAddress;      ///< the I2C address
-    uint8_t m_conversionDelay; ///< conversion deay
+    uint32_t m_conversionDelay; ///< conversion deay
     uint8_t m_bitShift;        ///< bit shift amount
     adsGain_t m_gain;          ///< ADC gain
     adsSps_t  m_sps;
