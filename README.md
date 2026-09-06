@@ -1,3 +1,12 @@
+# Wolf-Pi Custom Version
+
+This is a fork of the original Adafuit ADS1015 Library, ported to Linux by sanjuruk.
+
+The base library remains intact, but we're getting rid of the examples, substituting our own code for use in our project.
+
+Our project uses the ADS1115, connected to a NanoPi Duo 2 via i2c, running Armbian.
+
+
 # Driver: ADS1115 ADS1015 TLA2024 
 
 Driver for TI's ADS1115(16-bit) ADS1015(12-bit) TLA2024(12-bit) Differential or Single-Ended ADC with PGA and Comparator.
@@ -21,6 +30,8 @@ Example 'multiDeviceOnSameBus' added to show how to use 2 chips on the same bus.
 
 Build the static library and the examples using the 'Makefile'
 Go to the project folder and type <code>make</code>
+
+To clean up, use <code>make mrproper</code>
 
 ## Hardware
 
